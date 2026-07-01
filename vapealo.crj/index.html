@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>vapealo.crj</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- VENTANA +18 -->
+
+<div id="ageModal">
+
+<div class="modal">
+
+<div class="edadIcono">18+</div>
+
+<h2>¿Eres mayor de 18 años?</h2>
+
+<p>
+Este sitio está destinado únicamente para personas mayores de edad.
+</p>
+
+<div class="modalButtons">
+
+<button id="enterBtn">
+Sí, soy mayor de 18 años
+</button>
+
+<button id="exitBtn">
+No
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+<img src="imagenes/snoopy.png" id="logoSnoopy" alt="Snoopy">
+
+<div>
+
+<h1>vapealo<span>.crj</span></h1>
+
+<p>Día ajetreado? Date un respiro con sabores frutales 😮‍💨</p>
+
+</div>
+
+</div>
+
+<nav>
+
+<a href="#inicio">Inicio</a>
+<a href="#productos">Vapea con Estilo</a>
+<a href="#carrito" id="cartBtn">
+🛒 Carrito (<span id="cartCount">0</span>)
+</a>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section id="inicio" class="hero">
+
+<div class="heroTexto">
+
+<h2>vapealo<span>.crj</span></h2>
+
+<p>📍 Lima - Los Olivos</p>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Buscar productos..."
+list="productos">
+
+<datalist id="productos">
+<option value="Ignite">
+<option value="Yocco">
+<option value="Death Row">
+<option value="Mike Tyson">
+</datalist>
+
+<div class="botones">
+
+<a href="https://www.facebook.com/profile.php?id=61591274646162" target="_blank">
+Facebook
+</a>
+
+<a href="https://www.instagram.com/vapealo.crj/" target="_blank">
+Instagram
+</a>
+
+</div>
+
+</div>
+
+<!-- ESCENA PRINCIPAL -->
+
+<div class="heroImagen">
+
+<div class="neonGlow"></div>
+
+<div class="heroScene">
+
+<img src="imagenes/ignite.png" class="heroVape vape1" alt="Ignite">
+
+<img src="imagenes/yocco.png" class="heroVape vape2" alt="Yocco">
+
+<img src="imagenes/deathrow.png" class="heroVape vape3" alt="Death Row">
+
+<img src="imagenes/miketyson.png" class="heroVape vape4" alt="Mike Tyson">
+
+<div class="rock"></div>
+
+<div class="smoke smoke1"></div>
+<div class="smoke smoke2"></div>
+<div class="smoke smoke3"></div>
+
+</div> <!-- heroScene -->
+
+</div> <!-- heroImagen -->
+
+</section>
+
+<!-- PRODUCTOS -->
+
+<section id="productos">
+
+<h2>🔥 Vapea con Estilo</h2>
+
+<div class="cards" id="cards"></div>
+
+</section>
+
+<footer>
+© 2026 VAPEALO.CRJ
+</footer>
+
+<div id="cartPanel">
+    <h3>🛒 Carrito</h3>
+    <div id="cartItems"></div>
+</div>
+
+<button id="adminBtn">⚙️</button>
+
+<a href="https://wa.me/51910538239"
+class="wspFloat"
+id="wspFloat">
+💬
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
