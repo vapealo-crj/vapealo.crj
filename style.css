@@ -1,0 +1,801 @@
+﻿/* ======================================
+   VAPEALO.CRJ - VERSION 3.0 PREMIUM
+====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* Fondo */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at right center,rgba(255,0,0,.18),transparent 35%),
+    radial-gradient(circle at left bottom,rgba(255,40,40,.08),transparent 45%),
+    linear-gradient(180deg,#0b0b0b,#000);
+    z-index:-3;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(12px);
+    z-index:999;
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+#logoSnoopy{
+    width:65px;
+    animation:flotar 4s ease-in-out infinite;
+}
+
+.logo h1{
+    font-size:32px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#ff2d2d;
+}
+
+.logo p{
+    font-size:13px;
+    color:#d5d5d5;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#ff2d2d;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 8%;
+    gap:40px;
+}
+
+.heroTexto{
+    width:45%;
+    z-index:5;
+}
+
+.heroTexto h2{
+    font-size:62px;
+    font-weight:800;
+}
+
+.heroTexto span{
+    color:#ff2d2d;
+}
+
+.heroTexto p{
+    margin:18px 0;
+    color:#d8d8d8;
+    font-size:20px;
+}
+
+#searchInput{
+    width:100%;
+    max-width:430px;
+    padding:16px 22px;
+    border:none;
+    border-radius:40px;
+    background:#151515;
+    color:white;
+    outline:none;
+    font-size:16px;
+}
+
+.botones{
+    display:flex;
+    gap:18px;
+    margin-top:28px;
+}
+
+.botones a{
+    text-decoration:none;
+    color:white;
+    background:#d10000;
+    padding:14px 24px;
+    border-radius:12px;
+    transition:.35s;
+    font-weight:600;
+}
+
+.botones a:hover{
+    background:#ff2d2d;
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(255,0,0,.45);
+}
+
+/* ESCENA */
+
+.heroImagen{
+    width:55%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    height:700px;
+}
+
+.heroScene{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+/* HALO ROJO */
+
+.neonGlow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(255,0,0,.55) 0%,
+    rgba(255,0,0,.18) 35%,
+    transparent 75%);
+    filter:blur(35px);
+    right:40px;
+    top:90px;
+    z-index:0;
+}
+
+/* LOS 4 VAPES */
+
+.heroVape{
+    position:absolute;
+    transition:.4s;
+    filter:
+    drop-shadow(0 0 25px rgba(255,0,0,.35));
+}
+
+.heroVape:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.vape1{
+    width:180px;
+    left:120px;
+    top:180px;
+    transform:rotate(-12deg);
+    z-index:4;
+}
+
+.vape2{
+    width:185px;
+    left:220px;
+    top:120px;
+    transform:rotate(-5deg);
+    z-index:5;
+}
+
+.vape3{
+    width:185px;
+    left:320px;
+    top:170px;
+    transform:rotate(8deg);
+    z-index:4;
+}
+
+.vape4{
+    width:180px;
+    left:430px;
+    top:135px;
+    transform:rotate(15deg);
+    z-index:3;
+}
+
+/* ROCA */
+
+.rock{
+    position:absolute;
+    bottom:80px;
+    left:50%;
+    transform:translateX(-50%);
+    width:420px;
+    height:150px;
+    border-radius:50%;
+    background:
+    radial-gradient(circle at center,
+    #555 0%,
+    #2b2b2b 35%,
+    #141414 70%,
+    transparent 100%);
+    filter:blur(4px);
+    z-index:1;
+}
+
+/* HUMO */
+
+.smoke{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    filter:blur(35px);
+    animation:smokeFloat 7s linear infinite;
+}
+
+.smoke1{
+    width:90px;
+    height:90px;
+    left:210px;
+    top:130px;
+    animation-delay:0s;
+}
+
+.smoke2{
+    width:120px;
+    height:120px;
+    left:320px;
+    top:70px;
+    animation-delay:2s;
+}
+
+.smoke3{
+    width:80px;
+    height:80px;
+    left:430px;
+    top:150px;
+    animation-delay:4s;
+}
+
+@keyframes smokeFloat{
+
+0%{
+opacity:0;
+transform:translateY(40px) scale(.7);
+}
+
+25%{
+opacity:.45;
+}
+
+75%{
+opacity:.2;
+}
+
+100%{
+opacity:0;
+transform:translateY(-180px) scale(1.8);
+}
+
+}
+
+@keyframes flotar{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+/*=========================
+VENTANA +18
+=========================*/
+
+#ageModal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.88);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+backdrop-filter:blur(12px);
+}
+
+.modal{
+width:500px;
+max-width:90%;
+background:#121212;
+padding:40px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,0,0,.3);
+box-shadow:0 0 40px rgba(255,0,0,.3);
+}
+
+.edadIcono{
+width:90px;
+height:90px;
+margin:auto;
+border-radius:50%;
+background:#d40000;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+font-weight:700;
+color:white;
+margin-bottom:20px;
+}
+
+.modal h2{
+font-size:30px;
+margin-bottom:15px;
+}
+
+.modal p{
+color:#cfcfcf;
+margin-bottom:25px;
+line-height:28px;
+}
+
+.modalButtons{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.modalButtons button{
+padding:15px 25px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+transition:.3s;
+}
+
+#enterBtn{
+background:#d40000;
+color:white;
+}
+
+#enterBtn:hover{
+background:#ff2d2d;
+box-shadow:0 0 20px rgba(255,0,0,.5);
+}
+
+#exitBtn{
+background:#333;
+color:white;
+}
+
+/*=========================
+SECCIONES
+=========================*/
+
+section{
+padding:90px 8%;
+}
+
+section h2{
+font-size:42px;
+margin-bottom:25px;
+color:#ff2d2d;
+}
+
+/*=========================
+CARDS
+=========================*/
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+margin-top:35px;
+}
+
+.card{
+background:#111;
+border-radius:20px;
+padding:25px;
+text-align:center;
+border:1px solid rgba(255,255,255,.05);
+transition:.35s;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(255,0,0,.35);
+border-color:#ff2d2d;
+}
+
+.card img{
+width:180px;
+height:180px;
+object-fit:contain;
+margin-bottom:15px;
+transition:.35s;
+}
+
+.card:hover img{
+transform:scale(1.08);
+}
+
+.card h3{
+font-size:22px;
+margin-top:10px;
+}
+
+/*=========================
+FOOTER
+=========================*/
+
+footer{
+padding:30px;
+text-align:center;
+background:#080808;
+color:#bdbdbd;
+border-top:1px solid rgba(255,255,255,.05);
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:991px){
+
+header{
+flex-direction:column;
+gap:18px;
+padding:20px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:180px;
+}
+
+.heroTexto,
+.heroImagen{
+width:100%;
+}
+
+.heroTexto h2{
+font-size:44px;
+}
+
+.heroImagen{
+height:600px;
+}
+
+.neonGlow{
+width:320px;
+height:320px;
+right:auto;
+left:50%;
+transform:translateX(-50%);
+}
+
+.vape1{
+width:120px;
+left:20%;
+top:200px;
+}
+
+.vape2{
+width:130px;
+left:35%;
+top:140px;
+}
+
+.vape3{
+width:130px;
+left:50%;
+top:190px;
+}
+
+.vape4{
+width:120px;
+left:65%;
+top:150px;
+}
+
+.rock{
+width:300px;
+height:100px;
+}
+
+.botones{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+#searchInput{
+max-width:100%;
+}
+
+.card img{
+width:150px;
+height:150px;
+}
+
+}
+.logo img{
+    position: relative;
+    z-index: 2;
+    filter:
+    drop-shadow(0 0 8px #fff)
+    drop-shadow(0 0 10px red)
+    drop-shadow(0 0 20px red);
+}
+
+.logo{
+    position: relative;
+}
+
+.logo::before{
+    content:'';
+    position:absolute;
+    width:60px;
+    height:60px;
+    background:rgba(255, 0, 0, 0.64);
+    border-radius:50%;
+    left:8px;
+    top:5px;
+    filter:blur(18px);
+    opacity:.45;
+}
+
+.logo{
+    position: relative;
+}
+
+.logo::before{
+    content:"";
+    position:absolute;
+    left:8px;
+    top:8px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:rgba(255, 0, 0, 0.521);
+    filter:blur(25px);
+    z-index:0;
+}
+
+#logoSnoopy{
+    position:relative;
+    z-index:2;
+    filter:
+        drop-shadow(0 0 8px rgba(255,255,255,.3))
+        drop-shadow(0 0 18px rgba(255, 0, 0, 0.447));
+}
+
+#cartPanel{
+    display:none;
+    position:fixed;
+    top:80px;
+    right:20px;
+    width:320px;
+    background:#111;
+    border:1px solid red;
+    border-radius:15px;
+    padding:15px;
+    z-index:9999;
+    box-shadow:0 0 20px red;
+}
+
+.cart-item{
+    margin-bottom:15px;
+    padding-bottom:10px;
+    border-bottom:1px solid #333;
+}
+
+.cart-item button{
+
+    width:35px;
+    height:35px;
+
+    background:#111;
+    color:white;
+
+    border:1px solid red;
+
+    border-radius:8px;
+
+    font-size:20px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    margin:0 5px;
+    cursor:pointer;
+}
+
+.precio{
+    width:85%;
+    height:90px;
+    margin-top:15px;
+
+    background:#0a0a0a;
+    color:white;
+
+    border:1px solid red;
+    border-radius:30px;
+
+    font-size:20px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:0 0 20px rgba(255,0,0,.4);
+}
+
+.cart-controls{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:10px;
+}
+
+.precioCarrito{
+
+    margin-left:auto;
+
+    background:#111;
+
+    border:1px solid red;
+
+    border-radius:12px;
+
+    padding:8px 15px;
+
+    color:white;
+
+    font-weight:700;
+}
+
+.totalCarrito{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    text-align:center;
+
+    background:#111;
+
+    border:1px solid red;
+
+    border-radius:15px;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:700;
+}
+
+.btnComprarFinal{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:15px;
+
+    background:red;
+
+    color:white;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+.wspFloat{
+    position:fixed;
+    left:30px;
+    bottom:30px;
+
+    width:65px;
+    height:65px;
+
+    background:#25D366;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:34px;
+    text-decoration:none;
+
+    z-index:99999;
+    cursor:grab;
+}
+.accionesCarrito{
+    display:flex;
+    gap:10px;
+}
+
+.btnComprarFinal{
+    flex:1;
+}
+
+.btnVaciar{
+    width:60px;
+    border:none;
+    border-radius:12px;
+    background:#111;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+#adminBtn{
+    position:fixed;
+    bottom:10px;
+    left:10px;
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    background:#111;
+    color:white;
+
+    border:2px solid red;
+
+    font-size:18px;
+}
